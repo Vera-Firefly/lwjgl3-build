@@ -15,6 +15,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11"
       - name: Build JRE JAR files
         run: |
           gradle :jre_lwjgl3glfw:build --no-daemon
